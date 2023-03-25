@@ -54,7 +54,7 @@ go run cmd/supplier/main.go
 Finally, call the inventory service using curl with a [trace context](https://www.w3.org/TR/trace-context/#traceparent-header-field-values) header:
 
 ```
-curl localhost:3333/erik3 -H 'traceparent:00-4bf92f3577b34da6a3ce929d0e0e4799-a3ce929d0e0e4799-01'
+curl localhost:3333/whatever -H 'traceparent:00-4bf92f3577b34da6a3ce929d0e0e4799-a3ce929d0e0e4799-01'
 ```
 
 Navigate to Jaeger's GUI at http://localhost:16686/ and explore your trace!
