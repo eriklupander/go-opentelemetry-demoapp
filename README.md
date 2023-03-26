@@ -2,9 +2,22 @@
 
 Sets up a make-believe scenario with two microservices:
 
-* Inventory service - calls MongoDB and the Supplier Service
+* Inventory service - calls MongoDB and then the Supplier Service
 * Supplier service - calls MySQL
 
+```
++--------+     +---------+    +--------+    
+|  Curl  | ->  |Inventory| -> |Supplier|
++--------+     +---------+    +--------+
+                    |              |
+                    V              V
+                  _____          _____   
+                 /_____\        /_____\  
+                 |Mongo|        |MySQL|  
+                 \_____/        \_____/  
+```
+
+## Running
 Use a bunch of different console windows.
 
 Start Jeager:
